@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import CollectionsPage from "./components/CollectionsPage";
 import './App.css';
 
 const Home = () =>(
@@ -19,11 +20,7 @@ const Admin = () => (
   </div>
 )
 
-const Collections = () => (
-  <div>
-    <h2>Collections</h2>
-  </div>
-)
+
 
 const Works = () => (
   <div>
@@ -44,7 +41,7 @@ class App extends Component {
         <div>          
           <Route exact path="/" component={Home}/>
           <Route exact path="/admin" component={Admin}/>
-          <Route exact path="/admin/collections" component={Collections}/>
+          <Route exact path="/admin/collections" component={CollectionsPage}/>
           <Route exact path="/admin/works" component={Works}/>
           <Route exact path="/admin/orders" component={Orders}/>
         </div>
