@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import CollectionsPage from "./components/CollectionsPage";
+import AdminWrapper from "./components/AdminWrapper";
 import './App.css';
 
 const Home = () =>(
@@ -10,17 +11,13 @@ const Home = () =>(
   </div>
 )
 
-const Admin = () => (
-  <div>
-    <ul>
-      <li><Link to="/admin/collections">Collections</Link></li>
-      <li><Link to="/admin/works">Works</Link></li>
-      <li><Link to="/admin/orders">Orders</Link></li>
-    </ul>
-  </div>
+const Admin = () =>(
+  <AdminWrapper>
+    <div>Admin</div>
+    <Link to="/admin/collections">Collections</Link>
+    <Link to="/admin/works">Works</Link>
+  </AdminWrapper>
 )
-
-
 
 const Works = () => (
   <div>
